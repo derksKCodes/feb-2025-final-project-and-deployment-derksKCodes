@@ -4,26 +4,44 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart - Electronics Store</title>
+    <title>Electronics E-commerce Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <h1><a href="index.html">Electronics Store</a></h1>
-            <nav>
+            <h1 class="logo"><a href="index.html">Electronics Store</a></h1>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="mobile-menu-btn" aria-label="Toggle Navigation">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="close-menu-btn" class="mobile-menu-close-btn" aria-label="Close Menu">✖</button>
+            <nav class="mobile-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="cart.html">Cart</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">About Us</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
+    </div>
 
-    <main>
+    <main class="main-content">
         <section>
             <h2>Your Shopping Cart</h2>
             <div class="cart-items">
@@ -41,11 +59,51 @@
             <p class="cart-total">Total: $1798</p>
             <button>Proceed to Checkout</button>
         </section>
+
+
+        <section class="special-offer">
+            <h2>Special Offer</h2>
+            <p>Get 20% off on your first purchase! Shop now and grab the best deals.</p>
+            <a href="products.html" class="shop-now-btn">Shop Now</a>
+        </section>
+
+        <section class="testimonials">
+            <h2>Customer Testimonials</h2>
+            <div class="testimonials-grid">
+                <blockquote class="testimonial-card">
+                    <p>"I love the quality of the products and the fast shipping. Highly recommended!"</p>
+                    <cite>- John Doe</cite>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"The customer service is excellent. They helped me with my order and were very responsive."</p>
+                    <cite>- Jane Smith</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="brands">
+            <h2>Our Trusted Brands</h2>
+            <div class="brands-container">
+                <img src="https://logo.clearbit.com/apple.com" alt="Apple" />
+                <img src="https://logo.clearbit.com/samsung.com" alt="Samsung" />
+                <img src="https://logo.clearbit.com/sony.com" alt="Sony" />
+                <img src="https://logo.clearbit.com/dell.com" alt="Dell" />
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2025 Electronics Store. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Electronics Store. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="about.html">About Us</a> |
+                <a href="#">Contact Us</a> |
+                <a href="#">Privacy Policy</a>
+            </nav>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
